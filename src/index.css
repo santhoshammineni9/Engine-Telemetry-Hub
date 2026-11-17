@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #050811;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(14, 165, 233, 0.14), transparent 70%),
+      radial-gradient(circle at 85% 90%, rgba(16, 185, 129, 0.06), transparent 45%),
+      linear-gradient(to right, rgba(30, 41, 59, 0.22) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30, 41, 59, 0.22) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+    background-attachment: fixed;
+    color: #e2e8f0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Chakra Petch', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  /* Monospace tabular numerals for technical instrumentation */
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Gaming Telemetry HUD Panel with Tactical Corner Brackets */
+.hud-panel {
+  position: relative;
+  background: linear-gradient(180deg, rgba(12, 19, 34, 0.96) 0%, rgba(8, 13, 24, 0.98) 100%);
+  border: 1px solid rgba(51, 65, 85, 0.72);
+  box-shadow:
+    inset 0 1px 0 rgba(56, 189, 248, 0.12),
+    0 12px 32px -12px rgba(2, 6, 23, 0.85);
+}
+
+.hud-panel::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(to right, #38bdf8 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, #38bdf8 2px, transparent 2px) 0 0,
+    linear-gradient(to left, #38bdf8 2px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, #38bdf8 2px, transparent 2px) 100% 0,
+    linear-gradient(to right, #38bdf8 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, #38bdf8 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, #38bdf8 2px, transparent 2px) 100% 100%,
+    linear-gradient(to top, #38bdf8 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  opacity: 0.55;
+}
+
+.hud-subpanel {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(9, 14, 26, 0.95) 100%);
+  border: 1px solid rgba(51, 65, 85, 0.65);
+  box-shadow: inset 0 1px 0 rgba(148, 163, 184, 0.06);
+}
+
+.hud-chamfer {
+  clip-path: polygon(
+    8px 0%,
+    100% 0%,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0% 100%,
+    0% 8px
+  );
+}
+
+/* Precision Gaming Telemetry Range Slider */
+input[type="range"].hud-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #0f172a;
+  border: 1px solid rgba(51, 65, 85, 0.8);
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"].hud-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 18px;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.55);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].hud-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+input[type="range"].hud-slider::-moz-range-thumb {
+  width: 14px;
+  height: 18px;
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border: 1px solid #bae6fd;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-spin {
+    animation: none !important;
+  }
+}
+
+/* Custom scrollbar for telemetry logs and matrix views */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}

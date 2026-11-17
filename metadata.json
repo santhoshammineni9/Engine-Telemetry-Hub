@@ -1,0 +1,6 @@
+{
+  "name": "Automobile Engine Health Deterioration & Stochastic State Modeling",
+  "description": "Interactive applied statistics and stochastic simulation platform showcasing exact standardized logistic regression inference and 4-state Markov chain degradation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
